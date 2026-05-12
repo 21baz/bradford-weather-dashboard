@@ -1,6 +1,6 @@
 # Bradford Weather Intelligence
 
-A polished Streamlit portfolio dashboard for live Bradford weather monitoring and historical weather-station analysis. The app combines an Open-Meteo live feed with a historical University of Bradford station CSV, interactive Plotly visualisations, live weather alerts, correlation analysis, and Bradford MET comparison analytics.
+A polished Streamlit dashboard for live Bradford weather monitoring and historical weather-station analysis. The app combines an Open-Meteo live feed with a historical University of Bradford station CSV, interactive Plotly visualisations, live weather alerts, correlation analysis, and Bradford MET comparison analytics.
 
 ## Features
 
@@ -53,58 +53,6 @@ weather-dashboard-portfolio/
     └── filters.py
 ```
 
-## Run Locally
-
-```bash
-cd weather-dashboard-portfolio
-python3 -m venv .venv
-source .venv/bin/activate
-pip install -r requirements.txt
-streamlit run app.py
-```
-
-Then open:
-
-```text
-http://localhost:8501
-```
-
-On Windows PowerShell:
-
-```powershell
-cd weather-dashboard-portfolio
-python -m venv .venv
-.venv\Scripts\Activate.ps1
-pip install -r requirements.txt
-streamlit run app.py
-```
-
-## Deployment Notes
-
-For Replit or hosted environments:
-
-```bash
-streamlit run app.py --server.address 0.0.0.0 --server.port 8501
-```
-
-For Streamlit Community Cloud:
-
-1. Push this project folder to GitHub.
-2. Set `app.py` as the main Streamlit file.
-3. Keep `requirements.txt` in the repository root.
-4. Ensure publishable datasets are stored in `data/`.
-
-## Screenshots
-
-Add final screenshots before publishing:
-
-```markdown
-![Dashboard overview](assets/screenshots/dashboard-overview.png)
-![Historical trend chart](assets/screenshots/historical-trend-chart.png)
-![Correlation analysis](assets/screenshots/correlation-analysis.png)
-![MET comparison](assets/screenshots/met-comparison.png)
-```
-
 ## Known Limitations
 
 - Open-Meteo availability depends on network access.
@@ -117,13 +65,6 @@ Add final screenshots before publishing:
 
 - Add automated tests for data loading, validation, and timeframe filtering.
 - Add export buttons for filtered CSV data and chart images.
-- Add optional deployment screenshots and a live portfolio URL.
+- Add ML to predict future weather patterns.
 - Add more MET baseline metrics if suitable public datasets are available.
 - Add a short methodology note explaining station location, units, and assumptions.
-
-## Deployment Checklist
-
-- Do not commit `.venv/`, cache folders, private datasets, or university marking files.
-- Replace or anonymise data before publishing if the CSV is not approved for public use.
-- Add screenshots to `assets/screenshots/`.
-- Confirm the live deployed app can reach Open-Meteo.
